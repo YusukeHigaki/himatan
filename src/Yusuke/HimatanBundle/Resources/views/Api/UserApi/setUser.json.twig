@@ -1,0 +1,6 @@
+{% extends 'YusukeHimatanBundle:Api:baseApi.json.twig' %}
+{% block content %}
+    {% if id %}
+        "id": {{ id }}
+    {% endif %}
+{% endblock %}

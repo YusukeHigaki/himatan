@@ -1,0 +1,16 @@
+#########GLOBAL##########
+#Global Symfony
+#these files need to be copied when installing application
+web/bundles/
+app/bootstrap*
+app/cache/*
+app/logs/*
+vendor/
+app/config/parameters.yml
+
+#Global
+*.swp
+*.swo
+*.swn
+
+

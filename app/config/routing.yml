@@ -1,0 +1,4 @@
+YusukeHimatanBundle:
+    resource: "@YusukeHimatanBundle/Controller/"
+    type:     annotation
+    prefix:   /

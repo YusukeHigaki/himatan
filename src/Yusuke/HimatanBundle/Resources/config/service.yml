@@ -1,0 +1,7 @@
+services:
+ #Services
+    s3_upload_service:
+        class: Yusuke\HimatanBundle\Service\S3UploadService
+        arguments:
+            - @aws_s3
+            - %amazon_s3_bucket_name%

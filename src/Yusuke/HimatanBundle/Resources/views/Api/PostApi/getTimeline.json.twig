@@ -1,0 +1,25 @@
+{% extends 'YusukeHimatanBundle:Api:baseApi.json.twig' %}
+{% block content %}
+    "Posts": [
+    {% for Post in Posts %}
+        {
+        "id": {{ Post.id }},
+        "text": "{{ Post.text }}",
+        "updatedAt": {{ Post.updatedAt | date('U') }},
+
+        "area": {
+        "area_id1": {{ Post.areaId1 }}
+        "area_id2": {{ Post.areaId2 }}
+        "area_id3": {{ Post.areaId3 }}
+        }
+
+        "user": {
+        "icon": "https://secure.gravatar.com/avatar/74eae7483ba65f6cef5bc31c201458d7",
+        "id": {{ Post.user.id }},
+        "name": "{{ Post.user.name }}"
+        }
+
+        }
+    {% endfor %}
+    ]
+{% endblock %}
