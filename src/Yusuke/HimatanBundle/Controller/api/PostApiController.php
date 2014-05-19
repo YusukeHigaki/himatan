@@ -29,16 +29,15 @@ class PostApiController extends ApiController
         if('POST' === $request->getMethod()){
             $user = $this->getDoctrine()->getRepository('YusukeHimatanBundle:User')
                 ->findOneBy(array('id'=>$request->get('userId')));
-            if(!$user) throw new ClientErrorException('invalidPostValue');
+            if(!$user ||!$request->get('areaId1')) throw new ClientErrorException('invalidPostValue');
 
             $post->setUser($user)
                  ->setText($request->get('text'))
-                 ->setAreaId1($request->get('areaId1'))
-                 ->setAreaId2($request->get('areaId2'))
-                 ->setAreaId3($request->get('areaId3'));
+                 ->setAreaId1((int)$request->get('areaId1'))
+                 ->setAreaId2((int)$request->get('areaId2'))
+                 ->setAreaId3((int)$request->get('areaId3'));
             $validator = $this->get('validator');
             $errors = $validator->validate($post,array('setPost'));
-
             if(count($errors)>0){
                 throw new ClientErrorException('invalidPostValue');
             }else{
@@ -48,8 +47,6 @@ class PostApiController extends ApiController
                 return array();
             }
         }
-
-
         return array();
     }
 
@@ -59,7 +56,12 @@ class PostApiController extends ApiController
      */
     public function getTimelineAction(Request $request)
     {
-        return array();
+        $postService = $this->get('post_service');
+        ($request->get('postId'))?$postId = $request->get('postId'):$postId = null;
+        $posts = $postService->fetchTimelinePosts($postId , 3);
+        return array(
+            'Posts'=>$posts
+        );
     }
 
 }

@@ -4,6 +4,8 @@ namespace Yusuke\HimatanBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
+use Symfony\Component\Validator\Constraints as Assert;
+
 /**
  * Post
  *
@@ -27,6 +29,10 @@ class Post
      * @var integer
      *
      * @ORM\Column(name="area_id1", type="integer", nullable=false)
+     * @Assert\NotBlank(groups={"setPost"})
+     * @Assert\Type(type="integer",message="The value {{ value }} is not a valid {{ type }}.",groups={"setPost"})
+     * @Assert\Length(min="1",max="11",groups={"setPost"})
+     *
      */
     private $areaId1;
 
@@ -34,6 +40,8 @@ class Post
      * @var integer
      *
      * @ORM\Column(name="area_id2", type="integer", nullable=true)
+     * @Assert\Type(type="integer",message="The value {{ value }} is not a valid {{ type }}.",groups={"setPost"})
+     * @Assert\Length(min="1",max="11",groups={"setPost"})
      */
     private $areaId2;
 
@@ -41,6 +49,8 @@ class Post
      * @var integer
      *
      * @ORM\Column(name="area_id3", type="integer", nullable=true)
+     * @Assert\Type(type="integer",message="The value {{ value }} is not a valid {{ type }}.",groups={"setPost"})
+     * @Assert\Length(min="1",max="11",groups={"setPost"})
      */
     private $areaId3;
 
@@ -48,6 +58,10 @@ class Post
      * @var string
      *
      * @ORM\Column(name="text", type="string", length=100, nullable=false)
+     *
+     * @Assert\NotBlank(groups={"setPost"})
+     * @Assert\Type(type="string",message="The value {{ value }} is not a valid {{ type }}.",groups={"setPost"})
+     * @Assert\Length(min="5",max="100",groups={"setPost"})
      */
     private $text;
 
@@ -83,6 +97,8 @@ class Post
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="user_id", referencedColumnName="id")
      * })
+     *
+     * @Assert\NotBlank(groups={"setPost"})
      */
     private $user;
 
