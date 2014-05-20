@@ -102,8 +102,6 @@ class Post
      */
     private $user;
 
-
-
     /**
      * Get id
      *
@@ -297,4 +295,5 @@ class Post
     {
         return $this->user;
     }
+
 }

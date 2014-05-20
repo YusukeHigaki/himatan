@@ -8,8 +8,11 @@
 
 namespace Yusuke\HimatanBundle\Controller\Api;
 
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\bundle\FrameworkBundle\Controller\Controller;
 use Yusuke\HimatanBundle\Controller\AppController;
+use Yusuke\HimatanBundle\Exception\ClientErrorException;
+
 
 /**
  * ApiController.
@@ -18,5 +21,12 @@ use Yusuke\HimatanBundle\Controller\AppController;
 
 abstract class ApiController extends AppController
 {
+    public function __construct()
+    {
+        parent::__construct();
+    }
 
+    public function checkRestMethod(Request $request){
+        if(!'POST' === $request->getMethod()) throw new ClientErrorException('invalidRESTMethod');
+    }
 }

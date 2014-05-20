@@ -1,0 +1,19 @@
+{% extends 'YusukeHimatanBundle:Api:baseApi.json.twig' %}
+{% block content %}
+    "Messages": [
+    {% for Message in Messages %}
+        {
+        "id": {{ Message.id }},
+        "text": "{{ Message.text }}",
+        "updatedAt": {{ Message.updatedAt | date('U') }},
+
+        "from": {
+        "id": {{ Message.from.id }},
+        "name": "{{ Message.from.name }}",
+        "icon": {{ amazon_s3_base_url }}{{ amazon_s3_dir }}user/{{ Message.from.pic1 }}
+        }
+
+        }
+    {% endfor %}
+    ]
+{% endblock %}

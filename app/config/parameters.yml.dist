@@ -13,3 +13,16 @@ parameters:
 
     locale:            en
     secret:            ThisTokenIsNotSoSecretChangeIt
+
+    # AWS Service Settings
+    aws_key:                [[AWS_KEY]]
+    aws_secret:             [[AWS_SECRET]]
+    aws_account_id:         null
+    aws_canonical_id:       null
+    aws_canonical_name:     null
+    aws_mfa_serial:         null
+    aws_cloudfront_keypair: null
+    aws_cloudfront_pem:     null
+    amazon_s3_base_url:     [[BASE_URL]]
+    amazon_s3_dir:          [[DIR]]
+    amazon_s3_bucket_name:  [[BUCKET]]

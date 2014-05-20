@@ -32,26 +32,26 @@ class UserApiController extends ApiController
      */
     public function setUserAction(Request $request)
     {
+        $this->checkRestMethod($request);
         $user = new User();
-        if('POST' === $request->getMethod()){
-            $user->setDevice($request->get('device'))
-                 ->setVersion($request->get('version'))
-                 ->setToken($request->get('token'));
+        $user->setDevice($request->get('device'))
+            ->setVersion($request->get('version'))
+            ->setToken($request->get('token'));
 
-            $validator = $this->get('validator');
-            $errors = $validator->validate($user,array('setUserApi'));
+        $validator = $this->get('validator');
+        $errors = $validator->validate($user,array('setUserApi'));
 
-            if(count($errors)>0){
-                throw new ClientErrorException('inValidPostValue');
-            }else{
-                $em = $this->get('doctrine')->getEntityManager();
-                $em->persist($user);
-                $em->flush();
-                return array(
-                    'id' => $user->getId(),
-                );
-            }
+        if(count($errors)>0){
+            throw new ClientErrorException('inValidPostValue');
+        }else{
+            $em = $this->get('doctrine')->getEntityManager();
+            $em->persist($user);
+            $em->flush();
+            return array(
+                'id' => $user->getId(),
+            );
         }
+
     }
 
     /**
@@ -60,53 +60,55 @@ class UserApiController extends ApiController
      */
     public function updateUserAction(Request $request)
     {
-        if('POST' === $request->getMethod()){
-            $user = $this->get('doctrine')->getRepository('YusukeHimatanBundle:User')->findOneBy(array(
-                'id' => (int)$request->request->get('id'),
-            ));
-            if(!$user){
-                throw new ClientErrorException('inValidPostValue');
-            }
+        $this->checkRestMethod($request);
 
-            $validator = $this->get('validator');
-
-            if($request->get('token')){
-                $user->setToken($request->get('token'));
-                $errors = $validator->validate($user,array('updateTokenApi'));
-            }else{
-                $user
-                    ->setName($request->get('name'))
-                    ->setSex((int)$request->get('sex'))
-                    ->setAge((int)$request->get('age'))
-                    ->setAreaId((int)$request->get('areaId'))
-                    ->setintroduction($request->get('introduction'));
-
-                $s3uploadService = $this->get('s3_upload_service');
-                $picFileParams = array('pic1','pic2','pic3','pic4');
-                foreach($picFileParams as $params){
-                    $file = $request->files->get($params);
-                    if($file){
-                        $iconImg = new ImageFile($file);
-                        switch($params){
-                            case('pic1') : $user->setPic1($iconImg->getFileName()); break;
-                            case('pic2') : $user->setPic2($iconImg->getFileName()); break;
-                            case('pic3') : $user->setPic3($iconImg->getFileName()); break;
-                            case('pic4') : $user->setPic4($iconImg->getFileName()); break;
-                        }
-                        $s3uploadService->upload($iconImg,'s3/himatan/dev/user/');
-                        $iconImg->remove();
-                    }
-                }
-                $errors = $validator->validate($user,array('updateUserApi'));
-            }
-            if(count($errors)>0){
-                throw new ClientErrorException('inValidPostValue');
-            }else{
-                $em = $this->get('doctrine')->getEntityManager();
-                $em->flush();
-                return array();
-            }
+        $user = $this->get('doctrine')->getRepository('YusukeHimatanBundle:User')->findOneBy(array(
+            'id' => (int)$request->request->get('id'),
+        ));
+        if(!$user){
+            throw new ClientErrorException('inValidPostValue');
         }
+
+        $validator = $this->get('validator');
+
+        if($request->get('token')){
+            $user->setToken($request->get('token'));
+            $errors = $validator->validate($user,array('updateTokenApi'));
+        }else{
+            $user
+                ->setName($request->get('name'))
+                ->setSex((int)$request->get('sex'))
+                ->setAge((int)$request->get('age'))
+                ->setAreaId((int)$request->get('areaId'))
+                ->setintroduction($request->get('introduction'));
+
+            $s3uploadService = $this->get('s3_upload_service');
+            $picFileParams = array('pic1','pic2','pic3','pic4');
+            foreach($picFileParams as $params){
+                $file = $request->files->get($params);
+                if($file){
+                    $iconImg = new ImageFile($file);
+                    switch($params){
+                        case('pic1') : $user->setPic1($iconImg->getFileName()); break;
+                        case('pic2') : $user->setPic2($iconImg->getFileName()); break;
+                        case('pic3') : $user->setPic3($iconImg->getFileName()); break;
+                        case('pic4') : $user->setPic4($iconImg->getFileName()); break;
+                    }
+                    $dir = $this->container->getParameter('amazon_s3_dir') . 'user/';
+                    $s3uploadService->upload($iconImg,$dir);
+                    $iconImg->remove();
+                }
+            }
+            $errors = $validator->validate($user,array('updateUserApi'));
+        }
+        if(count($errors)>0){
+            throw new ClientErrorException('inValidPostValue');
+        }else{
+            $em = $this->get('doctrine')->getEntityManager();
+            $em->flush();
+            return array();
+        }
+
     }
 
 

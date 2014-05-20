@@ -10,3 +10,9 @@ services:
         class: Yusuke\HimatanBundle\Service\PostService
         arguments:
             - @doctrine
+
+    message_service:
+        class: Yusuke\HimatanBundle\Service\MessageService
+        arguments:
+            - @doctrine
+

@@ -4,6 +4,7 @@ namespace Yusuke\HimatanBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
+use Symfony\Component\Validator\Constraints as Assert;
 
 
 /**
@@ -27,8 +28,21 @@ class Message
      * @var string
      *
      * @ORM\Column(name="text", type="string", length=500, nullable=false)
+     * @Assert\NotBlank(groups={"setMessage","setImage"})
+     * @Assert\Type(type="string",message="The value {{ value }} is not a valid {{ type }}.",groups={"setMessage","setImage"})
+     * @Assert\Length(min="1",max="500",groups={"setMessage","setImage"})
+     *
      */
     private $text;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="type", type="integer", nullable=false)
+     * @Assert\NotBlank(groups={"setMessage","setImage"})
+     * @Assert\Type(type="integer",message="The value {{ value }} is not a valid {{ type }}.",groups={"setMessage","setImage"})
+     */
+    private $type;
 
     /**
      * @var \DateTime
@@ -60,8 +74,10 @@ class Message
      *
      * @ORM\ManyToOne(targetEntity="User")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="from", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="`from`", referencedColumnName="id")
      * })
+     * @Assert\NotBlank(groups={"setMessage","setImage"})
+     *
      */
     private $from;
 
@@ -70,8 +86,10 @@ class Message
      *
      * @ORM\ManyToOne(targetEntity="User")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="to", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="`to`", referencedColumnName="id")
      * })
+     * @Assert\NotBlank(groups={"setMessage","setImage"})
+     *
      */
     private $to;
 
@@ -108,6 +126,29 @@ class Message
     public function getText()
     {
         return $this->text;
+    }
+
+    /**
+     * Set type
+     *
+     * @param int $type
+     * @return Message
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+
+        return $this;
+    }
+
+    /**
+     * Get type
+     *
+     * @return int
+     */
+    public function getType()
+    {
+        return $this->type;
     }
 
     /**

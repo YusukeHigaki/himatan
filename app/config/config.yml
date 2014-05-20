@@ -28,6 +28,9 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    globals:
+        amazon_s3_base_url: "%amazon_s3_base_url%"
+        amazon_s3_dir:    "%amazon_s3_dir%"
 
 # Assetic Configuration
 assetic:

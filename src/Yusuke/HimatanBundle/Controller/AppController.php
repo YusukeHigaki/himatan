@@ -17,5 +17,8 @@ use Symfony\bundle\FrameworkBundle\Controller\Controller;
 
 abstract class AppController extends Controller
 {
+    public function __construct()
+    {
 
+    }
 }
