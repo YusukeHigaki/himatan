@@ -8,6 +8,7 @@
 
 namespace Yusuke\HimatanBundle\Controller\Api;
 
+use Symfony\Component\Config\Definition\Exception\Exception;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -33,6 +34,7 @@ class UserApiController extends ApiController
     public function setUserAction(Request $request)
     {
         $this->checkRestMethod($request);
+
         $user = new User();
         $user->setDevice($request->get('device'))
             ->setVersion($request->get('version'))
@@ -52,6 +54,27 @@ class UserApiController extends ApiController
             );
         }
 
+    }
+
+    /**
+     * @Route("/getUser",defaults={"_format"="json"},name="api_user_getUser")
+     * @Template
+     */
+    public function getUserAction(Request $request)
+    {
+        $this->checkRestMethod($request);
+
+        $user = $this->getDoctrine()->getRepository('YusukeHimatanBundle:user')
+            ->findOneBy(array(
+                'id' => $request->get('id'),
+                'deleteFlag' => 0,
+            ));
+
+        if(!$user) throw new ClientErrorException('invalidPostValue');
+
+        return array(
+            'User' => $user
+        );
     }
 
     /**
@@ -108,7 +131,6 @@ class UserApiController extends ApiController
             $em->flush();
             return array();
         }
-
     }
 
 

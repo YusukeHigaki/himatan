@@ -4,11 +4,12 @@ namespace Yusuke\HimatanBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Like
  *
- * @ORM\Table(name="like", indexes={@ORM\Index(name="like_from_fk", columns={"from"}), @ORM\Index(name="like_to_fk", columns={"to"})})
+ * @ORM\Table(name="`like`", indexes={@ORM\Index(name="like_from_fk", columns={"from"}), @ORM\Index(name="like_to_fk", columns={"to"})})
  * @ORM\Entity
  */
 class Like
@@ -52,8 +53,9 @@ class Like
      *
      * @ORM\ManyToOne(targetEntity="User")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="from", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="`from`", referencedColumnName="id")
      * })
+     * @Assert\NotBlank(groups={"setLikeApi"})
      */
     private $from;
 
@@ -62,8 +64,9 @@ class Like
      *
      * @ORM\ManyToOne(targetEntity="User")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="to", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="`to`", referencedColumnName="id")
      * })
+     * @Assert\NotBlank(groups={"setLikeApi"})
      */
     private $to;
 
