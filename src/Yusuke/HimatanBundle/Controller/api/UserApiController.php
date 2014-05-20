@@ -35,11 +35,12 @@ class UserApiController extends ApiController
     {
         $this->checkRestMethod($request);
 
-        $user = new User();
-        $user->setDevice($request->get('device'))
-            ->setVersion($request->get('version'))
-            ->setToken($request->get('token'));
+        if(!$request->get('device') || !$request->get('version')) throw new ClientErrorException('invalidPostValue');
 
+        $user = new User();
+        $user->setDevice((int)$request->get('device'))
+            ->setVersion((int)$request->get('version'))
+            ->setToken($request->get('token'));
         $validator = $this->get('validator');
         $errors = $validator->validate($user,array('setUserApi'));
 
@@ -87,6 +88,7 @@ class UserApiController extends ApiController
 
         $user = $this->get('doctrine')->getRepository('YusukeHimatanBundle:User')->findOneBy(array(
             'id' => (int)$request->request->get('id'),
+            'deleteFlag' => 0,
         ));
         if(!$user){
             throw new ClientErrorException('inValidPostValue');

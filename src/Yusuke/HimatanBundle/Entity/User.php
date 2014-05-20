@@ -130,7 +130,6 @@ class User
      * @var string
      *
      * @ORM\Column(name="token", type="string", length=255, nullable=true)
-     * @Assert\NotBlank(groups={"setUserApi","updateTokenApi"})
      * @Assert\Type(type="string",groups={"setUserApi","updateTokenApi"})
      */
     private $token;

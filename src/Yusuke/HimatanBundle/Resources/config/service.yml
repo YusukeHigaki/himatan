@@ -16,3 +16,7 @@ services:
         arguments:
             - @doctrine
 
+    blacklist_service:
+        class: Yusuke\HimatanBundle\Service\BlacklistService
+        arguments:
+            - @doctrine

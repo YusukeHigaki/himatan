@@ -4,6 +4,7 @@ namespace Yusuke\HimatanBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
+use Symfony\Component\Validator\Constraints as Assert;
 
 
 /**
@@ -53,8 +54,9 @@ class Report
      *
      * @ORM\ManyToOne(targetEntity="User")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="from", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="`from`", referencedColumnName="id")
      * })
+     * @Assert\NotBlank(groups={"setLikeApi"})
      */
     private $from;
 
@@ -63,8 +65,9 @@ class Report
      *
      * @ORM\ManyToOne(targetEntity="User")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="to", referencedColumnName="id")
+     *   @ORM\JoinColumn(name="`to`", referencedColumnName="id")
      * })
+     * @Assert\NotBlank(groups={"setLikeApi"})
      */
     private $to;
 

@@ -60,7 +60,7 @@ class PostApiController extends ApiController
 
         $postService = $this->get('post_service');
         ($request->get('postId'))?$postId = $request->get('postId'):$postId = null;
-        $posts = $postService->fetchTimelinePosts($postId , 3);
+        $posts = $postService->fetchTimelinePosts($postId , $this->container->getParameter('post_num'));
         return array(
             'Posts'=>$posts
         );

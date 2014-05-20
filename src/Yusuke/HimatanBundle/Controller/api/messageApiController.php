@@ -30,9 +30,9 @@ class MessageApiController extends ApiController
 
         $message = new Message();
         $from = $this->getDoctrine()->getRepository('YusukeHimatanBundle:User')
-            ->findOneBy(array('id'=>$request->get('fromId')));
+            ->findOneBy(array('id'=>$request->get('from')));
         $to = $this->getDoctrine()->getRepository('YusukeHimatanBundle:User')
-            ->findOneBy(array('id'=>$request->get('toId')));
+            ->findOneBy(array('id'=>$request->get('to')));
         if(!$from || !$to || !$request->get('text')){
             throw new ClientErrorException('invalidPostValue');
         }
@@ -65,9 +65,9 @@ class MessageApiController extends ApiController
 
         $message = new Message();
         $from = $this->getDoctrine()->getRepository('YusukeHimatanBundle:User')
-            ->findOneBy(array('id'=>$request->get('fromId')));
+            ->findOneBy(array('id'=>$request->get('from')));
         $to = $this->getDoctrine()->getRepository('YusukeHimatanBundle:User')
-            ->findOneBy(array('id'=>$request->get('toId')));
+            ->findOneBy(array('id'=>$request->get('to')));
         $img = $request->files->get('img');
         if (!$from || !$to || empty($img)) {
             throw new ClientErrorException('invalidPostValue');
@@ -95,7 +95,9 @@ class MessageApiController extends ApiController
             $em->flush();
         }
 
-        return array();
+        return array(
+            'Img' => $img
+        );
     }
 
     /**
@@ -108,7 +110,7 @@ class MessageApiController extends ApiController
 
         $messageService = $this->get('message_service');
         ($request->get('messageId'))?$messageId = $request->get('messageId'):$messageId = 0;
-        $messages = $messageService->fetchNewMessages($request->get('toId'),$messageId);
+        $messages = $messageService->fetchNewMessages($request->get('userId'),$messageId);
         return array(
             'Messages'=>$messages
         );
