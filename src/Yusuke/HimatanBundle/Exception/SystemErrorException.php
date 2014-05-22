@@ -6,9 +6,10 @@
  * Time: 18:34
  */
 
-namespace Yusuke\HimtataBundle\Exception;
+namespace Yusuke\HimatanBundle\Exception;
 
 use Symfony\Component\HttpKernel\Exception\HttpException;
+
 
 /**
  * SystemErrorException.
