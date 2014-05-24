@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="581643e9-2203-4c20-afac-f86e56fb651d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Command/AdminCommand/deleteUserCommand.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Resources/views/Api/PostApi/getTimeline.json.twig" afterPath="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Resources/views/Api/PostApi/getTimeline.json.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Controller/Admin/AdminController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Controller/Admin/AdminRootController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Exception/Output/ClientErrorOutputFactory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Form/Admin/DeleteUserType.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Resources/views/base.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Resources/views/Admin/base.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Resources/views/Admin/Admin/deleteUser.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Resources/views/Admin/Admin/home.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Entity/User.php" afterPath="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Entity/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Resources/config/service.yml" afterPath="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Resources/config/service.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="symfony.iws" />
@@ -28,23 +35,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="deleteUserCommand.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Command/AdminCommand/deleteUserCommand.php">
+      <file leaf-file-name="ApiController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Controller/api/ApiController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="65" selection-start="1015" selection-end="1015" vertical-scroll-proportion="-13.041667" vertical-offset="137" max-vertical-offset="585">
+            <state line="28" column="54" selection-start="574" selection-end="574" vertical-scroll-proportion="-14.375" vertical-offset="0" max-vertical-offset="495">
               <folding>
-                <element signature="e#6#94#0" expanded="true" />
-                <element signature="e#149#214#0" expanded="true" />
+                <element signature="e#145#190#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BlacklistService.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Service/BlacklistService.php">
+      <file leaf-file-name="UserApiController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Controller/api/UserApiController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="23" selection-start="472" selection-end="472" vertical-scroll-proportion="0.34793815" vertical-offset="120" max-vertical-offset="645">
-              <folding />
+            <state line="121" column="43" selection-start="4030" selection-end="4039" vertical-scroll-proportion="1.607221" vertical-offset="241" max-vertical-offset="2055">
+              <folding>
+                <element signature="e#6#95#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -62,22 +70,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Controller/Api/ApiController.php" />
-        <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Controller/UserApiController.php" />
-        <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Resources/views/Api/baseApi.json.twig" />
-        <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Resources/views/Api/UserApi/setUserApi.json.twig" />
-        <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Exception/ExceptionInterface.php" />
-        <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Exception/ClientErrorException.php" />
-        <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Resources/views/Api/UserApi/setUser.json.twig" />
-        <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Resources/views/Api/UserApi/updateToken.json.twig" />
-        <option value="$PROJECT_DIR$/app/cache/dev/twig/d4/21/5b7320c739ee92c882bf764879392629ba9e7fa6a4aa78eb014dc507905c.php" />
-        <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Entity/Document.php" />
-        <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Service/s3uploadService.php" />
-        <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Exception/SystemErrorException.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/app/AppKernel.php" />
-        <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Service/S3uploadService.php" />
         <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/DependencyInjection/YusukeHimatanExtension.php" />
         <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Component/ImageFile.php" />
         <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Service/S3UploadService.php" />
@@ -100,19 +92,35 @@
         <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Resources/views/Api/ReportApi/setReport.json.twig" />
         <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Entity/Report.php" />
         <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Service/BlackListService.php" />
-        <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Resources/config/service.yml" />
         <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Controller/api/ReportApiController.php" />
         <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Resources/views/Api/MessageApi/setImage.json.twig" />
         <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Controller/api/MessageApiController.php" />
         <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Controller/api/PostApiController.php" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
-        <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Entity/User.php" />
         <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Controller/api/UserApiController.php" />
         <option value="$PROJECT_DIR$/mysqldump.txt" />
         <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Resources/views/Api/PostApi/getTimeline.json.twig" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Command/AdminCommand/deleteUserCommand.php" />
+        <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Exception/SystemErrorException.php" />
         <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Service/BlacklistService.php" />
+        <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Exception/Output/ClientErrorOutputFactory.php" />
+        <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Command/AdminCommand/deleteUserCommand.php" />
+        <option value="$PROJECT_DIR$/app/cache/dev/appDevUrlGenerator.php" />
+        <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Controller/Admin/AdminRootController.php" />
+        <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Form/DeleteUserType.php" />
+        <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Resources/views/Admin/deleteUser.html.twig" />
+        <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Form/Admin/DeleteUserType.php" />
+        <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Entity/User.php" />
+        <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Controller/Admin/AdminController.php" />
+        <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Resources/views/Admin/Admin/home.html.twig.html" />
+        <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Resources/views/Admin/Admin/home.html.html.twig" />
+        <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/app/cache/dev/appDevUrlGenerator.php.meta" />
+        <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Resources/views/Admin/Admin/deleteUser.html.twig" />
+        <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Resources/views/Admin/Admin/home.html.twig" />
+        <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Resources/views/Admin/base.html.twig" />
+        <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Resources/config/service.yml" />
+        <option value="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Listener/ExceptionListener.php" />
       </list>
     </option>
   </component>
@@ -120,8 +128,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="4" />
     <option name="y" value="22" />
-    <option name="width" value="1362" />
-    <option name="height" value="746" />
+    <option name="width" value="1916" />
+    <option name="height" value="1058" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -226,7 +234,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Service" />
+              <option name="myItemId" value="Controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -255,34 +263,8 @@
               <option name="myItemId" value="Controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="symfony" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="symfony" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Yusuke" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HimatanBundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Command" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AdminCommand" />
+              <option name="myItemId" value="api" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -298,13 +280,16 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../symfony_study" />
     <property name="FullScreen" value="false" />
-    <property name="SearchEverywhereHistory" value="systemerror&#10;httpke" />
+    <property name="SearchEverywhereHistory" value="&#10;systemerror&#10;httpke" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Resources/views/Admin/Admin" />
+      <recent name="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Resources/views/Admin" />
+      <recent name="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Resources/views/Admin/DeleteUser" />
+      <recent name="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Form/Admin" />
       <recent name="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Controller/api" />
-      <recent name="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Controller" />
-      <recent name="$PROJECT_DIR$/src/Yusuke/HimatanBundle/Controller/Api" />
     </key>
   </component>
   <component name="RunManager">
@@ -333,15 +318,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="4" y="22" width="1362" height="746" extended-state="6" />
-    <editor active="true" />
+    <frame x="4" y="22" width="1916" height="1058" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32721713" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32712215" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32815734" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28484848" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19530416" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -350,10 +336,9 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -370,7 +355,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2545317" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19015151" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -393,120 +378,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Exception/ExceptionInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="1" selection-start="309" selection-end="309" vertical-scroll-proportion="0.47342193" vertical-offset="0" max-vertical-offset="602" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.lock">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1368" column="36" selection-start="49478" selection-end="49478" vertical-scroll-proportion="0.6433447" vertical-offset="20143" max-vertical-offset="23820" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Exception/NotFoundHttpException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="626" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Exception/HttpException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="626" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Resources/views/Api/baseApi.json.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="90" selection-end="136" vertical-scroll-proportion="0.12458472" vertical-offset="0" max-vertical-offset="602" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="111" selection-end="111" vertical-scroll-proportion="0.095846646" vertical-offset="0" max-vertical-offset="626" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="42" selection-start="275" selection-end="275" vertical-scroll-proportion="0.14950167" vertical-offset="0" max-vertical-offset="602" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Exception/ClientErrorException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="41" selection-start="346" selection-end="346" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="480">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="54" selection-start="797" selection-end="797" vertical-scroll-proportion="0.54404145" vertical-offset="0" max-vertical-offset="885" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="83" selection-start="952" selection-end="952" vertical-scroll-proportion="0.47342193" vertical-offset="0" max-vertical-offset="645" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/DependencyInjection/Configuration.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="41" selection-start="600" selection-end="600" vertical-scroll-proportion="0.4770318" vertical-offset="0" max-vertical-offset="566" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/DependencyInjection/YusukeHimatanExtension.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="7" selection-start="535" selection-end="535" vertical-scroll-proportion="0.37375414" vertical-offset="0" max-vertical-offset="602">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Resources/views/Api/UserApi/updateUser.json.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="94" selection-end="94" vertical-scroll-proportion="0.09966777" vertical-offset="0" max-vertical-offset="602" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Resources/views/Api/PostApi/setPost.json.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="93" selection-end="93" vertical-scroll-proportion="0.07475083" vertical-offset="0" max-vertical-offset="602" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml.dist">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="32" selection-start="523" selection-end="523" vertical-scroll-proportion="0.45527157" vertical-offset="0" max-vertical-offset="626" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="7" selection-start="897" selection-end="897" vertical-scroll-proportion="0.76677316" vertical-offset="0" max-vertical-offset="1470" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="140" column="6" selection-start="4655" selection-end="4655" vertical-scroll-proportion="0.8471761" vertical-offset="1320" max-vertical-offset="3690">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Controller/ControllerNameParser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="28" selection-start="975" selection-end="975" vertical-scroll-proportion="0.713073" vertical-offset="60" max-vertical-offset="1530" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Controller/AppController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="329" selection-end="329" vertical-scroll-proportion="0.47342193" vertical-offset="0" max-vertical-offset="602" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Controller/api/ApiController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="12" selection-start="587" selection-end="587" vertical-scroll-proportion="0.59800667" vertical-offset="0" max-vertical-offset="602" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Entity/Post.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="0" selection-start="860" selection-end="1077" vertical-scroll-proportion="0.30560273" vertical-offset="330" max-vertical-offset="4575" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Service/MessageService.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="1" selection-start="240" selection-end="240" vertical-scroll-proportion="0.32724252" vertical-offset="13" max-vertical-offset="675" />
@@ -514,11 +385,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Entity/Message.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="3" selection-start="2178" selection-end="2178" vertical-scroll-proportion="0.5602716" vertical-offset="990" max-vertical-offset="4110">
-          <folding>
-            <element signature="e#47#79#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="88" column="3" selection-start="2178" selection-end="2178" vertical-scroll-proportion="0.5602716" vertical-offset="990" max-vertical-offset="4110" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Resources/views/Api/LikeApi/setLike.json.twig">
@@ -545,11 +412,6 @@
         <state line="51" column="7" selection-start="1085" selection-end="1103" vertical-scroll-proportion="0.12733446" vertical-offset="690" max-vertical-offset="3090" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Resources/config/service.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="23" selection-start="552" selection-end="552" vertical-scroll-proportion="0.50319487" vertical-offset="0" max-vertical-offset="626" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Service/PostService.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="24" selection-start="366" selection-end="366" vertical-scroll-proportion="0.31727573" vertical-offset="79" max-vertical-offset="705" />
@@ -557,14 +419,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="29" selection-start="1009" selection-end="1009" vertical-scroll-proportion="0.7428115" vertical-offset="0" max-vertical-offset="626">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Exception/SystemErrorException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="625" selection-end="625" vertical-scroll-proportion="0.6976744" vertical-offset="0" max-vertical-offset="602" />
+        <state line="31" column="29" selection-start="1009" selection-end="1009" vertical-scroll-proportion="0.7428115" vertical-offset="0" max-vertical-offset="626" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Component/ImageFile.php">
@@ -584,15 +439,6 @@
         <state line="3" column="22" selection-start="116" selection-end="116" vertical-scroll-proportion="0.07475083" vertical-offset="0" max-vertical-offset="602" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="10" selection-start="3082" selection-end="3082" vertical-scroll-proportion="0.093023255" vertical-offset="1669" max-vertical-offset="8670">
-          <folding>
-            <element signature="e#47#79#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mysqldump.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="70" column="23" selection-start="2909" selection-end="2909" vertical-scroll-proportion="0.3670473" vertical-offset="825" max-vertical-offset="3135" />
@@ -605,22 +451,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Controller/api/PostApiController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="13" selection-start="1830" selection-end="1830" vertical-scroll-proportion="1.4451827" vertical-offset="0" max-vertical-offset="1110">
-          <folding>
-            <element signature="e#55#100#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Controller/api/ReportApiController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="43" selection-start="1620" selection-end="1620" vertical-scroll-proportion="1.2458472" vertical-offset="0" max-vertical-offset="1155">
-          <folding>
-            <element signature="e#55#100#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="50" column="43" selection-start="1620" selection-end="1620" vertical-scroll-proportion="1.2458472" vertical-offset="0" max-vertical-offset="1155" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Resources/views/Api/MessageApi/setMessage.json.twig">
@@ -628,14 +461,6 @@
         <state line="3" column="0" selection-start="93" selection-end="93" vertical-scroll-proportion="0.07475083" vertical-offset="0" max-vertical-offset="602">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/bootstrap.php.cache">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="45825" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/cache/.gitkeep">
@@ -657,27 +482,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Controller/api/UserApiController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="43" selection-start="4030" selection-end="4039" vertical-scroll-proportion="2.8405316" vertical-offset="0" max-vertical-offset="2055">
-          <folding>
-            <element signature="e#6#95#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Controller/api/LikeApiController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="7" selection-start="567" selection-end="567" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="1065">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Controller/api/MessageApiController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="6" selection-start="3647" selection-end="3647" vertical-scroll-proportion="0.67607975" vertical-offset="1168" max-vertical-offset="1770">
-          <folding />
-        </state>
+        <state line="111" column="6" selection-start="3647" selection-end="3647" vertical-scroll-proportion="0.67607975" vertical-offset="1168" max-vertical-offset="1770" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -694,20 +501,165 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Command/AdminCommand/deleteUserCommand.php">
+    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="65" selection-start="1015" selection-end="1015" vertical-scroll-proportion="-13.041667" vertical-offset="137" max-vertical-offset="585">
-          <folding>
-            <element signature="e#6#94#0" expanded="true" />
-            <element signature="e#149#214#0" expanded="true" />
-          </folding>
+        <state line="35" column="53" selection-start="1534" selection-end="1534" vertical-scroll-proportion="0.6520619" vertical-offset="257" max-vertical-offset="645" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="407" selection-end="407" vertical-scroll-proportion="0.5798969" vertical-offset="0" max-vertical-offset="388" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bootstrap.php.cache">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="11" selection-start="330" selection-end="332" vertical-scroll-proportion="-2.1698112" vertical-offset="125" max-vertical-offset="45825">
+          <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/DependencyInjection/Configuration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="41" selection-start="600" selection-end="600" vertical-scroll-proportion="0.46632123" vertical-offset="0" max-vertical-offset="579" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/DependencyInjection/YusukeHimatanExtension.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="7" selection-start="535" selection-end="535" vertical-scroll-proportion="0.38860103" vertical-offset="0" max-vertical-offset="579" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Controller/api/PostApiController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="13" selection-start="1830" selection-end="1830" vertical-scroll-proportion="1.1013288" vertical-offset="132" max-vertical-offset="1035" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Exception/Output/ClientErrorOutputFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="0" selection-start="608" selection-end="608" vertical-scroll-proportion="-0.54485047" vertical-offset="703" max-vertical-offset="1305" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Service/BlacklistService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="23" selection-start="472" selection-end="472" vertical-scroll-proportion="0.34793815" vertical-offset="120" max-vertical-offset="645">
+        <state line="31" column="84" selection-start="860" selection-end="860" vertical-scroll-proportion="0.52657807" vertical-offset="73" max-vertical-offset="675" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Exception/SystemErrorException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="3" selection-start="203" selection-end="203" vertical-scroll-proportion="0.19933555" vertical-offset="0" max-vertical-offset="602">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Exception/ClientErrorException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="49" selection-end="107" vertical-scroll-proportion="0.09966777" vertical-offset="0" max-vertical-offset="602">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Command/AdminCommand/deleteUserCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="5" selection-start="1084" selection-end="1084" vertical-scroll-proportion="0.67275745" vertical-offset="0" max-vertical-offset="602" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Resources/views/Api/baseApi.json.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="252" selection-end="252" vertical-scroll-proportion="0.2740864" vertical-offset="0" max-vertical-offset="602" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Controller/Admin/AdminRootController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="5" selection-start="595" selection-end="595" vertical-scroll-proportion="0.5481728" vertical-offset="0" max-vertical-offset="602" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="590" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="189" column="0" selection-start="4611" selection-end="4611" vertical-scroll-proportion="0.37707642" vertical-offset="2548" max-vertical-offset="8820">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Form/Admin/DeleteUserType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="5" selection-start="425" selection-end="425" vertical-scroll-proportion="0.49833888" vertical-offset="0" max-vertical-offset="602" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Controller/Admin/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="38" selection-start="688" selection-end="688" vertical-scroll-proportion="0.37636763" vertical-offset="16" max-vertical-offset="930">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="90">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Resources/config/service.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="553" selection-end="553" vertical-scroll-proportion="0.35181236" vertical-offset="0" max-vertical-offset="938">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Resources/views/Admin/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="32" selection-start="1327" selection-end="1327" vertical-scroll-proportion="0.5574324" vertical-offset="0" max-vertical-offset="888">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Resources/views/Admin/Admin/deleteUser.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="6" selection-start="235" selection-end="235" vertical-scroll-proportion="0.098468274" vertical-offset="0" max-vertical-offset="914">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Resources/views/Admin/Admin/home.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="57" selection-end="57" vertical-scroll-proportion="0.016411379" vertical-offset="0" max-vertical-offset="914">
+          <folding>
+            <marker date="1400896342000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Controller/api/LikeApiController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="30" selection-start="908" selection-end="908" vertical-scroll-proportion="0.46827134" vertical-offset="37" max-vertical-offset="1065">
+          <folding>
+            <element signature="e#55#100#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Controller/api/ApiController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="54" selection-start="574" selection-end="574" vertical-scroll-proportion="-14.375" vertical-offset="0" max-vertical-offset="495">
+          <folding>
+            <element signature="e#145#190#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Yusuke/HimatanBundle/Controller/api/UserApiController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="121" column="43" selection-start="4030" selection-end="4039" vertical-scroll-proportion="1.607221" vertical-offset="241" max-vertical-offset="2055">
+          <folding>
+            <element signature="e#6#95#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -176,6 +176,20 @@ class User
     private $file;
 
     /**
+     * Set id
+     *
+     * @param string $id
+     * @return User
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+
+        return $this;
+    }
+
+
+    /**
      * Get id
      *
      * @return integer 

@@ -1,0 +1,9 @@
+{% extends "YusukeHimatanBundle:Admin:base.html.twig" %}
+
+{% block page_title 'ユーザー削除' %}
+{% block content %}
+    <form action="{{ path('admin_delete_user') }}" method="post" {{ form_enctype(form) }}>
+    {{ form_widget(form) }}
+    <button type="submit" class="btn btn-success">送信</button>
+    </form>
+{% endblock %}
