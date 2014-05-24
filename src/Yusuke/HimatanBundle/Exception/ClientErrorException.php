@@ -12,12 +12,13 @@ use Symfony\Component\HttpKernel\Exception\HttpException;
 
 class ClientErrorException extends HttpException implements ExceptionInterface
 {
+    const HTTP_SUCCESS = 200;
     protected $message;
 
     public function __construct($message)
     {
         $this->message = $message;
-        parent::__construct(200,$message,null,array(),0);
+        parent::__construct(self::HTTP_SUCCESS,$message,null,array(),0);
     }
 
     public function getExceptionMessage()

@@ -4,7 +4,7 @@
     {% for Post in Posts %}
         {
         "id": {{ Post.id }},
-        "text": "{{ Post.text }}",
+        "text": {{ Post.text | json_encode }},
         "updatedAt": {{ Post.updatedAt | date('U') }},
 
         "area": {
@@ -18,7 +18,6 @@
         "id": {{ Post.user.id }},
         "name": "{{ Post.user.name }}"
         }
-
         }
     {% endfor %}
     ]

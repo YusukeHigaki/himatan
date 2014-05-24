@@ -27,6 +27,6 @@ abstract class ApiController extends AppController
     }
 
     public function checkRestMethod(Request $request){
-        if(!'POST' === $request->getMethod()) throw new ClientErrorException('invalidRESTMethod');
+        if('POST' !== $request->getMethod()) throw new ClientErrorException('invalidRESTMethod');
     }
 }

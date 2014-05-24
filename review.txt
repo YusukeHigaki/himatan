@@ -1,0 +1,57 @@
+# DB設計
+## UserTB
+* introduction TEXT型でもいいかも
+* cnt_heart → cnt_like なくてもいいかも(外の人からUPDATEさせない方がいい)(cnt_reportも同様)
+* version はtinyint(3) とか、varchar(10)とか
+* pic1 は DEFAULT NULL  （pictureTBを持っておく → 削除分も見れる、4枚以上もいける）
+* name も DEFAULT NULL
+
+## PostTB
+* area_id1,2,3 → varcharでJSONで格納もありっちゃあり（検索する必要ないとき）
+* area_id1,2,3 → 検索するなら別TBとかもあり
+* FOREIGN KEY 廃止 → INDEXがデフォルトで入る（負荷）＆ DBわけられない
+
+## ReportTB
+* `from` `to` → `from_user`,`to_user`
+* toにINDEX(検索する方にINDEX)
+
+## MessageTB
+* `text` ２つの意味を持たせない（文章＆画像でわける）
+* typeにコメント1=文章、2=画像みたいな
+
+## LikeTB
+* `Like`というTB名は良くない（MySQL予約後）
+
+## DBの命名規則について
+* user_like, user_report, mtb_***, など
+* カラム名 `to_user` など
+
+
+
+# Symfony
+## コントローラ周り
+* 無意味なAppController (使いたいときに作ればいい)
+* AppController & ApiController １つでもいいかも
+* validationはRequestで弾いちゃう
+
+## LikeApiController
+* $em->flush()は1リクエスト1回でOK
+* Controller側からはParameterのみわたし、Modelを呼ぶものはRepository側い実装
+* addHeart
+
+## MessageApiController
+* 書き方が統一されてない
+* $messageId = $request->get('messageId')?: 0;
+* $messageId = $request->get('messageId');
+
+## PostApiController
+* Requestのwrapperクラス(RequestListenerなど)を作り、if (is_numeric()) (int)$hoge;
+* 三項演算子の使い方（もう少しシンプルに）
+
+## ImageFile.php
+* getUploadRootDir() (プロジェクトルートの指定はSymfonyのクラスで)
+* generateFileName() DateTime()->format()を使うなど
+* exec()は基本使わない
+* 一時ファイルはtmp/ディレクトリにいれる
+
+

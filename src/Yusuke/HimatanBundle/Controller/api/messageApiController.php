@@ -28,11 +28,18 @@ class MessageApiController extends ApiController
     {
         $this->checkRestMethod($request);
 
+        if(!$request->get('text'))
+            throw new ClientErrorException('invalidPostValue');
+
         $message = new Message();
         $from = $this->getDoctrine()->getRepository('YusukeHimatanBundle:User')
             ->findOneBy(array('id'=>$request->get('from')));
+        if (!$from) throw new ClientErrorException('invalidPostValue');
+
         $to = $this->getDoctrine()->getRepository('YusukeHimatanBundle:User')
             ->findOneBy(array('id'=>$request->get('to')));
+        if (!$to) throw new ClientErrorException('invalidPostValue');
+
         if(!$from || !$to || !$request->get('text')){
             throw new ClientErrorException('invalidPostValue');
         }
@@ -41,18 +48,18 @@ class MessageApiController extends ApiController
             ->setFrom($from)
             ->setTo($to)
             ->setText($request->get('text'))
-            ->setType(1);
+            ->setType(1)
+            ;
         $validator = $this->get('validator');
         $errors = $validator->validate($message,'setMessage');
 
-        if(count($errors)>0){
-            throw new ClientErrorException('invalidPostValue');
-        }else{
-            $em = $this->get('doctrine')->getEntityManager();
-            $em->persist($message);
-            $em->flush();
-            return array();
-        }
+        if(count($errors)>0) throw new ClientErrorException('invalidPostValue');
+
+        $em = $this->get('doctrine')->getEntityManager();
+        $em->persist($message);
+        $em->flush();
+
+        return array();
     }
 
     /**
@@ -109,7 +116,7 @@ class MessageApiController extends ApiController
         $this->checkRestMethod($request);
 
         $messageService = $this->get('message_service');
-        ($request->get('messageId'))?$messageId = $request->get('messageId'):$messageId = 0;
+        $messageId = $request->get('messageId')?: 0;
         $messages = $messageService->fetchNewMessages($request->get('userId'),$messageId);
         return array(
             'Messages'=>$messages
