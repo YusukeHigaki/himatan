@@ -29,7 +29,10 @@ class PostApiController extends ApiController
 
         $post = new Post();
         $user = $this->getDoctrine()->getRepository('YusukeHimatanBundle:User')
-            ->findOneBy(array('id'=>$request->get('userId')));
+            ->findOneBy(array(
+                'id' => $request->get('userId')
+            ));
+
         if(!$user ||!$request->get('areaId1')) throw new ClientErrorException('invalidPostValue');
 
         $post->setUser($user)

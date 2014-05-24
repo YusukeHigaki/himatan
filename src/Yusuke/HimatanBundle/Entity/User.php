@@ -192,7 +192,7 @@ class User
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -215,7 +215,7 @@ class User
     /**
      * Get name
      *
-     * @return string 
+     * @return string
      */
     public function getName()
     {
@@ -238,7 +238,7 @@ class User
     /**
      * Get sex
      *
-     * @return boolean 
+     * @return boolean
      */
     public function getSex()
     {
@@ -261,7 +261,7 @@ class User
     /**
      * Get age
      *
-     * @return boolean 
+     * @return boolean
      */
     public function getAge()
     {
@@ -284,7 +284,7 @@ class User
     /**
      * Get areaId
      *
-     * @return integer 
+     * @return integer
      */
     public function getAreaId()
     {
@@ -307,7 +307,7 @@ class User
     /**
      * Get pic1
      *
-     * @return string 
+     * @return string
      */
     public function getPic1()
     {
@@ -401,7 +401,7 @@ class User
     /**
      * Get introduction
      *
-     * @return string 
+     * @return string
      */
     public function getIntroduction()
     {
@@ -424,7 +424,7 @@ class User
     /**
      * Get device
      *
-     * @return boolean 
+     * @return boolean
      */
     public function getDevice()
     {
@@ -447,7 +447,7 @@ class User
     /**
      * Get version
      *
-     * @return integer 
+     * @return integer
      */
     public function getVersion()
     {
@@ -470,7 +470,7 @@ class User
     /**
      * Get token
      *
-     * @return string 
+     * @return string
      */
     public function getToken()
     {
@@ -493,7 +493,7 @@ class User
     /**
      * Get cntHeart
      *
-     * @return integer 
+     * @return integer
      */
     public function getCntHeart()
     {
@@ -516,7 +516,7 @@ class User
     /**
      * Get cntReport
      *
-     * @return integer 
+     * @return integer
      */
     public function getCntReport()
     {
@@ -539,7 +539,7 @@ class User
     /**
      * Get createdAt
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -562,7 +562,7 @@ class User
     /**
      * Get updatedAt
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getUpdatedAt()
     {
@@ -581,6 +581,4 @@ class User
 
         return $this;
     }
-
-
 }
